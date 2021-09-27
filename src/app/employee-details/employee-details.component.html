@@ -1,4 +1,7 @@
 <table>
+    <thead>
+        <th [attr.colspan]="columnSpan">{{tableHeader}}</th>
+    </thead>
     <tbody>
         <tr>
             <td>Name</td>
@@ -18,3 +21,10 @@
         </tr>
     </tbody>
 </table>
+<button [ngClass]="applyClassToButton()">Click me</button>
+<br><br>
+<button [style.font-weight]="isBold? 'bold' :'normal' ">Click me</button>
+<br><br>
+<button [style.font-size.px]="fontSize">Click me</button>
+<br><br>
+<button [ngStyle]="getStyle()">Click me</button>

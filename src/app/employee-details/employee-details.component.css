@@ -7,3 +7,18 @@ table{
 td{
     border: 1px solid black;
 }
+
+th{
+    border: 1px solid black;
+}
+
+.boldClass{
+    font-weight: bold;
+}
+
+.italicClass{
+    font-style: italic;
+}
+.colorClass{
+    color: red;
+}
