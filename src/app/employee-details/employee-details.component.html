@@ -11,20 +11,25 @@
             <td>Last Name</td>
             <td>{{lastName}}</td>
         </tr>
-        <tr>
+        <tr *ngIf="toggleDetails">
             <td>Gender</td>
             <td>{{gender}}</td>
         </tr>
-        <tr>
+        <tr *ngIf="toggleDetails">
             <td>Age</td>
             <td>{{age}}</td>
         </tr>
     </tbody>
 </table>
-<button [ngClass]="applyClassToButton()">Click me</button>
+<br>
+<button [ngStyle]="getStyle()" (click)="showHideDetails()">{{toggleDetails?"Hide Details":"Show Details"}}</button>
+<br/><br/>
+<input type="text" [(ngModel)]="myName">
+<br/>
+Your name is {{myName | uppercase}}
+<!-- <button [ngClass]="applyClassToButton()">Click me</button>
 <br><br>
 <button [style.font-weight]="isBold? 'bold' :'normal' ">Click me</button>
 <br><br>
 <button [style.font-size.px]="fontSize">Click me</button>
-<br><br>
-<button [ngStyle]="getStyle()">Click me</button>
+<br><br> -->

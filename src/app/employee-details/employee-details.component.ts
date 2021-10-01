@@ -12,8 +12,8 @@ export class EmployeeDetailsComponent {
     lastName: string = "Girhe";
     gender: string = "Male";
     age: number = 25;
+    myName:string="";
 
-    
     classesToApply: string = "boldClass italicClass";
     applyBoldClass: boolean = true;
     applyItalicClass: boolean = true;
@@ -21,6 +21,7 @@ export class EmployeeDetailsComponent {
 
     isBold:boolean=true;
     fontSize:number=30;
+    toggleDetails:boolean=false;
 
     applyClassToButton(): any {
         let classes = {
@@ -33,10 +34,14 @@ export class EmployeeDetailsComponent {
 
     getStyle():any{
         let styles={
-            'font-size':'30px',
+            'font-size':'15px',
             'font-weight':'bold',
             'font-style': 'italic' 
         }
         return styles;
+    }
+
+    showHideDetails():void{
+        this.toggleDetails=!this.toggleDetails;
     }
 }
