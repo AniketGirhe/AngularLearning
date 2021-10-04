@@ -27,6 +27,11 @@
 <input type="text" [(ngModel)]="myName">
 <br/>
 Your name is {{myName | uppercase}}
+<br/>
+<input type="text" [value]='lastName' (input)='lastName=($event.target as HTMLInputElement).value'>
+<br/>
+Your surname is {{lastName}}
+
 <!-- <button [ngClass]="applyClassToButton()">Click me</button>
 <br><br>
 <button [style.font-weight]="isBold? 'bold' :'normal' ">Click me</button>
