@@ -1,0 +1,31 @@
+<h3 class="header">{{tableHeader}}</h3>
+<app-employee-count [all]="employeeDetails.length" [male]="getMaleEmployee()" [female]="getFemaleEmployee()"
+    (countRadioButtonSelectionChanged)="onRadioButtonChange($event)"></app-employee-count>
+<br />
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Salary</th>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let employee of employeeDetails">
+            <tr *ngIf="selectedEmployeeCountRadioButton=='all' || selectedEmployeeCountRadioButton==employee.gender">
+                <td>{{employee.id|uppercase}}</td>
+                <td>{{employee.name|employeeTitlePipe:employee.gender}}</td>
+                <td>{{employee.surname}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.dob|date:"dd/MM/yy"}}</td>
+                <td>{{employee.salary|currency:"USD":true:"1.3-3"}}</td>
+            </tr>
+            <tr *ngIf="!employeeDetails || employeeDetails.length==0">
+                <td colspan="5">No Employees to display</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+<br />
+<button (click)="getEmployee()">Refresh</button>

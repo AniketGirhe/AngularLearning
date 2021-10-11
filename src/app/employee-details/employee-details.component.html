@@ -24,17 +24,8 @@
 <br>
 <button [ngStyle]="getStyle()" (click)="showHideDetails()">{{toggleDetails?"Hide Details":"Show Details"}}</button>
 <br/><br/>
-<input type="text" [(ngModel)]="myName">
+<input type="text" [(ngModel)]="name">
 <br/>
-Your name is {{myName | uppercase}}
 <br/>
-<input type="text" [value]='lastName' (input)='lastName=($event.target as HTMLInputElement).value'>
-<br/>
-Your surname is {{lastName}}
+<app-employee-list></app-employee-list>
 
-<!-- <button [ngClass]="applyClassToButton()">Click me</button>
-<br><br>
-<button [style.font-weight]="isBold? 'bold' :'normal' ">Click me</button>
-<br><br>
-<button [style.font-size.px]="fontSize">Click me</button>
-<br><br> -->

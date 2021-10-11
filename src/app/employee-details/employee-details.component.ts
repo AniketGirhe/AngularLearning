@@ -12,16 +12,16 @@ export class EmployeeDetailsComponent {
     lastName: string = "Girhe";
     gender: string = "Male";
     age: number = 25;
-    myName:string="";
+    myName: string = "";
 
     classesToApply: string = "boldClass italicClass";
     applyBoldClass: boolean = true;
     applyItalicClass: boolean = true;
     applyColorClass: boolean = true;
 
-    isBold:boolean=true;
-    fontSize:number=30;
-    toggleDetails:boolean=false;
+    isBold: boolean = true;
+    fontSize: number = 30;
+    toggleDetails: boolean = false;
 
     applyClassToButton(): any {
         let classes = {
@@ -32,16 +32,16 @@ export class EmployeeDetailsComponent {
         return classes
     }
 
-    getStyle():any{
-        let styles={
-            'font-size':'15px',
-            'font-weight':'bold',
-            'font-style': 'italic' 
+    getStyle(): any {
+        let styles = {
+            'font-size': '15px',
+            'font-weight': 'bold',
+            'font-style': 'italic'
         }
         return styles;
     }
 
-    showHideDetails():void{
-        this.toggleDetails=!this.toggleDetails;
+    showHideDetails(): void {
+        this.toggleDetails = !this.toggleDetails;
     }
 }
