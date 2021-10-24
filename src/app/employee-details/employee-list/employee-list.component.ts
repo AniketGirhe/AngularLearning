@@ -28,6 +28,7 @@ export class EmployeeListComponent {
       { "id": "emp5", "name": "Neha", "surname": "Girhe", "gender": "female", "dob": "09/08/1995", "salary": 10000 }
     ]
   }
+  
 
   trackEmployeeById(index: number, employee: any): string {
     return employee.id;
